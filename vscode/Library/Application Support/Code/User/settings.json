@@ -1,161 +1,145 @@
 {
-  // BREADCRUMBS SETTINGS
   "breadcrumbs.enabled": false,
   "breadcrumbs.icons": false,
-  // CHAT SETTINGS
   "chat.agent.enabled": false,
   "chat.disableAIFeatures": true,
-  // DBT SETTINGS
-  "dbt.targetName": "prod",
-  // DIFF SETTINGS
   "diffEditor.ignoreTrimWhitespace": false,
   "diffEditor.renderSideBySide": false,
-  // EDITOR APPEARANCE AND BEHAVIOR
   "editor.accessibilitySupport": "off",
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.colorDecorators": true,
-  "editor.copyWithSyntaxHighlighting": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.colorDecorators": false,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorStyle": "line-thin",
-  "editor.detectIndentation": false,
-  "editor.emptySelectionClipboard": false,
-  "editor.fontFamily": "'Monaspace Neon Var', 'Fira Code', Monaco, monospace",
+  "editor.folding": false,
+  "editor.fontFamily": "Fira Code",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 12,
   "editor.fontWeight": "500",
-  "editor.formatOnPaste": true,
+  "editor.glyphMargin": false,
+  "editor.gotoLocation.multipleDeclarations": "goto",
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.gotoLocation.multipleImplementations": "goto",
+  "editor.gotoLocation.multipleReferences": "goto",
+  "editor.gotoLocation.multipleTypeDefinitions": "goto",
+  "editor.guides.highlightActiveBracketPair": true,
   "editor.guides.indentation": false,
   "editor.hideCursorInOverviewRuler": true,
   "editor.hover.delay": 1500,
+  "editor.hover.enabled": "on",
   "editor.lightbulb.enabled": "off",
   "editor.lineHeight": 1.6,
-  "editor.linkedEditing": true,
+<<<<<<< HEAD
+  "editor.lineNumbers": "on",
+=======
+  "editor.lineNumbers": "off",
+>>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
+  "editor.matchBrackets": "near",
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.occurrencesHighlight": "off",
   "editor.overviewRulerBorder": false,
+  "editor.padding.top": 5,
+  "editor.renderControlCharacters": false,
+  "editor.renderLineHighlight": "none",
   "editor.renderWhitespace": "boundary",
   "editor.scrollbar.horizontal": "hidden",
   "editor.scrollbar.vertical": "hidden",
   "editor.selectionHighlight": false,
-  "editor.semanticHighlighting.enabled": true,
-  "editor.smoothScrolling": true,
-  "editor.snippetSuggestions": "top",
   "editor.stickyScroll.enabled": false,
   "editor.tabCompletion": "onlySnippets",
   "editor.tabSize": 2,
   "editor.wordSeparators": "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?",
-  // EXPLORER SETTINGS
+  "explorer.autoReveal": true,
   "explorer.compactFolders": false,
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmPasteNative": false,
-  // FILE SETTINGS
+  "explorer.decorations.badges": true,
+  "explorer.decorations.colors": true,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.openEditors.visible": 1,
+  "extensions.ignoreRecommendations": true,
   "files.autoGuessEncoding": true,
-  "files.autoSave": "onWindowChange",
+  "files.autoSave": "afterDelay",
   "files.autoSaveWhenNoErrors": true,
-  "files.eol": "\n",
-  "files.hotExit": "off",
   "files.insertFinalNewline": true,
-  "files.simpleDialog.enable": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "files.watcherExclude": {
-    "**/.git/objects/**": true,
-    "**/.git/subtree-cache/**": true,
-    "**/bower_components/**": true,
-    "**/node_modules/**": true,
-    "**/tmp/**": true
-  },
-  // GITBLAME
   "git.blame.editorDecoration.enabled": true,
-  "git.blame.statusBarItem.enabled": true,
-  "gitblame.ignoreWhitespace": true,
-  "gitblame.infoMessageFormat": "${commit.hash_short}",
-  "gitblame.inlineMessageEnabled": true,
-  "gitblame.inlineMessageFormat": "${author.name} (${time.ago})",
-  "gitblame.inlineMessageMargin": 1,
-  "gitblame.statusBarMessageFormat": "${author.name} (${time.ago})",
-  // SCM SETTINGS
+  "git.decorations.enabled": true,
+  "problems.decorations.enabled": false,
   "scm.alwaysShowActions": true,
   "scm.alwaysShowRepositories": true,
-  "scm.diffDecorations": "gutter",
+  "scm.diffDecorations": "all",
   "scm.providerCountBadge": "auto",
-  // SEARCH SETTINGS
-  "search.actionsPosition": "auto",
-  "search.collapseResults": "auto",
-  "search.exclude": {
-    "**/.git": true,
-    "**/.nuxt": true,
-    "**/.output": true,
-    "**/.pnpm": true,
-    "**/.vscode": true,
-    "**/.yarn": true,
-    "**/dist/**": true,
-    "**/logs": true,
-    "**/out/**": true,
-    "**/public": true,
-    "**/temp": true
-  },
-  "search.followSymlinks": false,
-  "search.maxResults": null,
-  "search.showLineNumbers": true,
-  "search.useGlobalIgnoreFiles": true,
-  "search.useParentIgnoreFiles": true,
-  // SNOWFLAKE SETTINGS
   "snowflake.connectionsConfigFile": "/Users/ronm/.snowflake/config.toml",
-  // TERMINAL SETTINGS
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.cursorWidth": 2,
-  "terminal.integrated.enableFileLinks": "off",
-  "terminal.integrated.minimumContrastRatio": 1,
-  "terminal.integrated.scrollback": 50,
-  // WINDOW APPEARANCE AND BEHAVIOR
-  "window.closeWhenEmpty": true,
-  "window.commandCenter": false,
-  "window.dialogStyle": "native",
+  "sqlfluff.config": "${workspaceFolder}/.sqlfluff",
+  "sqlfluff.executablePath": "${workspaceFolder}/.venv/bin/sqlfluff",
+  "sqlfluff.experimental.format.executeInTerminal": true,
+  "sqlfluff.linter.run": "onSave",
+  "symbols.hidesExplorerArrows": false,
+  "telemetry.telemetryLevel": "off",
+  "window.autoDetectColorScheme": true,
+<<<<<<< HEAD
+=======
+  "window.customTitleBarVisibility": "never",
+>>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
+  "window.dialogStyle": "custom",
+  "window.nativeFullScreen": true,
   "window.nativeTabs": true,
-  "window.newWindowDimensions": "inherit",
-  "window.restoreFullscreen": true,
-  "window.title": "${folderPath} ${separator} ${activeEditorShort}",
-  "workbench.colorTheme": "Everforest Pro Dark Vibrant",
+  "window.title": "${rootName}",
+  "window.titleBarStyle": "native",
+  "workbench.activityBar.location": "hidden",
+  "workbench.colorTheme": "Everforest Pro Dark",
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.enablePreview": true,
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.editor.labelFormat": "short",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.editor.showTabs": "multiple",
+<<<<<<< HEAD
+  "workbench.editor.tabActionLocation": "right",
+=======
+  "workbench.editor.tabActionLocation": "left",
+>>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
   "workbench.editor.tabSizing": "shrink",
+  "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "symbols",
   "workbench.layoutControl.type": "both",
   "workbench.list.smoothScrolling": true,
-  "workbench.panel.defaultLocation": "left",
-  "workbench.productIconTheme": "material-product-icons",
+  "workbench.preferredDarkColorTheme": "Everforest Pro Dark",
+  "workbench.preferredLightColorTheme": "Everforest Pro Light",
   "workbench.reduceMotion": "on",
-  "workbench.settings.applyToAllProfiles": [
-    "workbench.colorCustomizations"
-  ],
   "workbench.sideBar.location": "right",
   "workbench.startupEditor": "none",
   "workbench.tips.enabled": false,
-  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.expandMode": "singleClick",
+  "workbench.tree.indent": 10,
   "workbench.tree.renderIndentGuides": "none",
   "workbench.view.alwaysShowHeaderActions": true,
-  "claudeCode.preferredLocation": "panel",
-  "workbench.editorAssociations": {
-    "*.pdf": "default"
-  },
-  "workbench.activityBar.location": "hidden",
-  "python.analysis.typeCheckingMode": "basic",
-  "[markdown]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "extensions.ignoreRecommendations": true,
   "yaml.disableSchemaDetection": [
     "**/dbt_project.yml",
     "**/dbt_project.yaml"
   ],
-  "chat.agentHost.enabled": true
+  "[jinja-sql]": {
+    "editor.defaultFormatter": "sqlfluff.vscode-sqlfluff"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+<<<<<<< HEAD
+  },
+  "claudeCode.preferredLocation": "panel"
+=======
+  }
+>>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
 }

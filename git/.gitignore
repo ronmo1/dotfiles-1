@@ -194,3 +194,5 @@ tags
 .history
 
 **/.claude/.cc-writes/
+
+**/.claude/settings.local.json

@@ -18,6 +18,7 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "fable[1m]",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
@@ -26,6 +27,7 @@
   "advisorModel": "fable",
   "skipWorkflowUsageWarning": true,
   "theme": "dark-ansi",
+  "editorMode": "normal",
   "preferredNotifChannel": "ghostty",
   "skipAutoPermissionPrompt": true
 }
