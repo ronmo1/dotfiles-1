@@ -29,11 +29,7 @@
   "editor.hover.enabled": "on",
   "editor.lightbulb.enabled": "off",
   "editor.lineHeight": 1.6,
-<<<<<<< HEAD
   "editor.lineNumbers": "on",
-=======
-  "editor.lineNumbers": "off",
->>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
   "editor.matchBrackets": "near",
   "editor.minimap.enabled": false,
   "editor.multiCursorModifier": "ctrlCmd",
@@ -82,10 +78,7 @@
   "symbols.hidesExplorerArrows": false,
   "telemetry.telemetryLevel": "off",
   "window.autoDetectColorScheme": true,
-<<<<<<< HEAD
-=======
-  "window.customTitleBarVisibility": "never",
->>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
+   "window.customTitleBarVisibility": "never",
   "window.dialogStyle": "custom",
   "window.nativeFullScreen": true,
   "window.nativeTabs": true,
@@ -98,11 +91,7 @@
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.editor.showTabs": "multiple",
-<<<<<<< HEAD
   "workbench.editor.tabActionLocation": "right",
-=======
-  "workbench.editor.tabActionLocation": "left",
->>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
   "workbench.editor.tabSizing": "shrink",
   "workbench.fontAliasing": "antialiased",
   "workbench.iconTheme": "symbols",
@@ -136,10 +125,4 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
-<<<<<<< HEAD
-  },
-  "claudeCode.preferredLocation": "panel"
-=======
-  }
->>>>>>> 11eb84b (chore(vscode): update editor and tooling settings)
 }
