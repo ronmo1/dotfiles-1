@@ -51,23 +51,9 @@ make brew
 | `yazi`       | File manager       | File previews, custom keymaps, Everforest theme                     |
 | `zsh`        | Zsh shell          | Aliases, functions, fzf (Everforest, bat previews), git completions |
 
-## Key Shortcuts
+## Aliases
 
-| Alias   | Command                             | Description                                    |
-| ------- | ----------------------------------- | ---------------------------------------------- |
-| `gs`    | `git status`                        | Working tree status                            |
-| `glo`   | `git log --pretty=…`                | Compact commit log (custom one-line format)    |
-| `gswi`  | interactive                         | Fuzzy-pick a branch to switch to               |
-| `gsync` | fetch + rebase + push               | Sync current branch with main                  |
-| `gundo` | `git reset --soft HEAD~1`           | Undo last commit, keep changes staged          |
-| `gdmer` | --                                  | Delete all locally merged branches             |
-| `fzk`   | `ps -ef \| fzf \| kill -9`          | Fuzzy-find and kill a process                  |
-| `fzb`   | `git checkout $(git branch \| fzf)` | Fuzzy-pick a git branch                        |
-| `mcd`   | `mkdir -p && cd`                    | Create directory and cd into it                |
-| `y`     | yazi wrapper                        | File manager that syncs cwd on exit            |
-| `brews` | --                                  | List all Homebrew formulae and casks with deps |
-| `bup`   | `brew update && upgrade`            | Update Homebrew and all packages               |
-| `vrun`  | `source .venv/bin/activate`         | Activate Python venv in current directory      |
+Every alias has an inline comment in its source file: `zsh/.config/zsh/aliases.zsh`, `git.zsh`, `fzf.zsh`, and shell functions in `functions.zsh`.
 
 ## Structure
 
@@ -99,7 +85,7 @@ mkdir -p newpkg/.config/newpkg
 mv ~/.config/newpkg/config.toml newpkg/.config/newpkg/
 # Add "newpkg" to PACKAGES in Makefile and to the Packages table above
 make restow
-make dry-run  # should report no conflicts
+make check    # no stow conflicts, Packages table matches PACKAGES
 ```
 
 **Machine-specific overrides:** Create `~/.zshrc.local` for settings that should not be version-controlled (work credentials, local PATHs, etc.). `.zshrc` sources it automatically after loading the zsh modules.
@@ -108,12 +94,16 @@ make dry-run  # should report no conflicts
 
 ## Commands
 
-| Command          | Description                                 |
-| ---------------- | ------------------------------------------- |
-| `make install`   | Symlink all packages to `~/`                |
-| `make uninstall` | Remove all symlinks                         |
-| `make restow`    | Re-symlink after adding or removing files   |
-| `make dry-run`   | Preview without applying                    |
-| `make brew`      | Install Homebrew packages from `~/Brewfile` |
-| `make update`    | Pull latest dotfiles and restow             |
-| `make help`      | List targets (default when running `make`)  |
+| Command          | Description                                                    |
+| ---------------- | -------------------------------------------------------------- |
+| `make install`   | Symlink all packages to `~/`                                   |
+| `make uninstall` | Remove all symlinks                                            |
+| `make restow`    | Re-symlink after adding or removing files                      |
+| `make dry-run`   | Preview without applying                                       |
+| `make brew`      | Install Homebrew packages from `~/Brewfile`                    |
+| `make skills`    | Sync skills and rules with `skillshare`                        |
+| `make update`    | Pull latest dotfiles, restow, and sync skills                  |
+| `make check`     | Lint shell files, check stow conflicts and the Packages table  |
+| `make help`      | List targets (default when running `make`)                     |
+
+`.macos` sets macOS system defaults. Run it by hand once per machine: `./.macos`.
