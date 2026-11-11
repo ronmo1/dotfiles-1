@@ -114,6 +114,7 @@ make dry-run  # should report no conflicts
 | `make uninstall` | Remove all symlinks                         |
 | `make restow`    | Re-symlink after adding or removing files   |
 | `make dry-run`   | Preview without applying                    |
+| `make check`     | Syntax-check shell files, validate JSON, run tests |
 | `make brew`      | Install Homebrew packages from `~/Brewfile` |
 | `make update`    | Pull latest dotfiles and restow             |
 | `make help`      | List targets (default when running `make`)  |
