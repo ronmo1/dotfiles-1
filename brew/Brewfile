@@ -26,9 +26,13 @@ brew "shfmt"
 
 # Editors
 brew "helix"
+brew "flow-control"
+brew "harper"
 
 # Terminal multiplexer
 brew "tmux"
+brew "herdr"
+brew "sesh"
 
 # Git tools
 brew "gh"
@@ -37,6 +41,10 @@ brew "lazygit"
 
 # File manager
 brew "yazi"
+
+# Productivity & AI tooling
+brew "skillshare"
+brew "task"
 
 # Python
 brew "uv"
