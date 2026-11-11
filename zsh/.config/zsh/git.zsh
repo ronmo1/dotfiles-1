@@ -16,7 +16,7 @@ alias ${gprefix}ap='git add --patch' # interactively stage hunks
 # Branch
 alias ${gprefix}b='git branch' # list branches
 alias ${gprefix}ba='git branch --all' # list all branches including remote
-alias ${gprefix}bd='git_branch_delete' # delete branch locally and on remote (safe)
+alias ${gprefix}bd='git_branch_delete' # force-delete branch locally and its same-named remote branch
 
 # Commit
 alias ${gprefix}c='git commit' # commit staged changes

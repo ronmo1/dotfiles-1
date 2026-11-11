@@ -126,32 +126,38 @@ function git_switch_interactive() {
 
 }
 
-# Delete branch locally and on remote (force delete)
+# Force-delete branches locally, and on the remote only when a same-named
+# remote branch exists. Never deletes the upstream a branch merely tracks
+# (e.g. origin/develop for a branch created from it), and never the main branch.
 function git_branch_delete() {
   if [[ -z "$1" ]]; then
     echo "Usage: gbd <branch-name> [branch-name...]" >&2
     return 1
   fi
 
+  local main_branch branch remote
+  main_branch=$(git_main_branch)
+
   for branch in "$@"; do
-    local remote
+    if [[ "$branch" == "$main_branch" ]]; then
+      echo "Refusing to delete $main_branch." >&2
+      continue
+    fi
+
     remote=$(git config "branch.$branch.remote" || echo "origin")
-    local ref
-    ref=$(git config "branch.$branch.merge" || echo "refs/heads/$branch")
 
     echo "Deleting $branch..."
-
-    # Force delete local branch
     git branch -D "$branch" || true
 
     # Skip if remote is local
     [[ "$remote" = "." ]] && continue
 
-    # Delete remote tracking branch
-    git branch -d -r "$remote/$branch" || continue
-
-    # Delete branch on remote server
-    git push "$remote" ":$ref"
+    if git show-ref --quiet --verify "refs/remotes/$remote/$branch"; then
+      # Fall back to pruning a stale remote-tracking ref if the remote branch is already gone.
+      git push "$remote" --delete "$branch" || git branch -d -r "$remote/$branch"
+    else
+      echo "No $remote/$branch; skipping remote delete."
+    fi
   done
 }
 
