@@ -8,6 +8,19 @@ function mcd() {
   mkdir -p "$1" && cd "$1" || return
 }
 
+# Feature probe used by aliases.zsh.
+# is-supported CMD            -> returns 0 if CMD runs successfully
+# is-supported CMD YES [NO]   -> prints YES if CMD succeeds, else NO (no newline)
+function is-supported() {
+  if (( $# == 1 )); then
+    eval "$1" &>/dev/null
+  elif eval "$1" &>/dev/null; then
+    print -rn -- "$2"
+  else
+    print -rn -- "${3-}"
+  fi
+}
+
 # ================================================================
 # AWS
 # ================================================================

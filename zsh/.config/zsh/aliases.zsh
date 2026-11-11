@@ -1,17 +1,8 @@
 #!/usr/bin/env zsh
-# Note: this file depends on functions.zsh being sourced first (for is-supported function)
+# Note: this file depends on functions.zsh being sourced first (for the is-supported function)
 
 (( ${+aliases[run-help]} )) && unalias run-help
 (( ${+aliases[which-command]} )) && unalias which-command
-
-# Global shortcuts
-if is-supported "alias -g"; then
-    alias -g H='| head'
-    alias -g T='| tail'
-    alias -g G='| grep'
-    alias -g L="| less"
-    alias -g C="| pbcopy"
-fi
 
 # Directory listing/traversal
 
